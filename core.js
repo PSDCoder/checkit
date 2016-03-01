@@ -117,9 +117,9 @@ function Runner(checkit, target, context) {
   this.errors         = {};
   this.checkit        = checkit;
   this.conditional    = checkit.conditional;
-  this.target         = _.clone(target || {})
-  this.context        = _.clone(context || {})
-  this.validator      = new Validator(this.target, checkit.language)
+  this.target         = _.clone(target || {});
+  this.context        = context; 
+  this.validator      = new Validator(this.target, checkit.language);
 }
 
 // Runs the validations on a specified "target".
